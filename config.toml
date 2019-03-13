@@ -48,7 +48,7 @@ home = [ "HTML", "RSS", "JSON"]
 pre = "<h3>More</h3>"
 name = "<i class='fa fa-github'></i> <label>Github repo</label>"
 identifier = "ds"
-url = "https://github.com/vjeantet/hugo-theme-docdock"
+url = "https://github.com/iceyang/data_structure_and_algorithm.git"
 weight = 10
 
 [[menu.shortcuts]]
