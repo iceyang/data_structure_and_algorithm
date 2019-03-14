@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://keepmoving.ren/learning/ds_and_alogorithm/"
 
 languageCode = "zh-CN"
 DefaultContentLanguage = "zh"
