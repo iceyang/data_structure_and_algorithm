@@ -52,7 +52,7 @@ url = "https://github.com/iceyang/data_structure_and_algorithm.git"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-bookmark'></i> <label>About me</label>"
+name = "<i class='fa fa-user'></i> <label>About me</label>"
 identifier = "justin"
 url = "http://keepmoving.ren/"
 weight = 20
