@@ -9,6 +9,7 @@ date: 2019-03-13T11:07:30+08:00
 
 {{% panel theme="default" header="Changlog" %}}
 
+* 2019-03-19 优化[由栈实现的队列](other/queue_by_stack/#优化版)
 * 2019-03-13 新增[由栈实现的队列](other/queue_by_stack/)
 
 {{%/ panel %}}

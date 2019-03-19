@@ -58,8 +58,49 @@ export default class QueueByStack<T> {
 
 其中`reverseStack`是实现了将栈倒过来，取完数据后，重新反转一次。
 
-## TBD
-优化
+## 优化版
+上面简单版本的实现，有一个问题，就是每次出队，会有两次整个栈的倒装操作。
+
+我们可以用两个栈来保存队列中的内容，假设为S1和S2。
+
+S1负责入队操作，所有新push的数据，直接进入到S1中。
+
+出队由S2负责，当S2中不存在元素时，将S1的内容pop到S2中，然后再从S2 pop出去。
+
+为什么可以这样做？
+
+由于栈的先进后出特性，当S2没有元素时，S1的内容直接装到S2，S2的元素顺序经过S1的倒装，就变成了先进先出的效果。
+
+而如果S2有元素，为什么出队就不需要理S1了？因为S2的元素肯定是比S1的元素先到达队列的，所以可以直接忽视S1，直到S2没元素了，才去S1中取。
+
+下面是简单的代码实现：
+
+```
+/**
+ * 优化版本，保存两个栈，一个用于入队(S1)，一个用于出队(S2)。
+ * 入队时：直接进栈S1
+ * 出队时：假如S2为空，则将S1倒入S2中，S2出栈；如果S2不为空，则S2直接出栈
+ */
+export class QueueByStack2<T> implements Queue<T>{
+  private s1: Stack<T> = new Stack<T>();
+  private s2: Stack<T> = new Stack<T>();
+
+  length(): number { return this.s1.length() + this.s2.length(); }
+
+  push(t: T) {
+    this.s1.push(t);
+  }
+
+  poll(): T | undefined {
+    if (this.length() <= 0) return undefined;
+    if (this.s2.length() > 0) return this.s2.pop();
+    while (this.s1.length() > 0) {
+      this.s2.push(<T>this.s1.pop());
+    }
+    return this.s2.pop();
+  }
+}
+```
 
 ## 代码
 上面的源码可以在 [{{< icon name="fa-github" size="large" >}}](https://github.com/iceyang/data_structure_and_algorithm_code/blob/master/src/queue_by_stack) 获得。
