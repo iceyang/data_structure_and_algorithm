@@ -1,5 +1,5 @@
 ---
-title: "More things"
+title: "其他记录"
 date: 2019-03-13T11:19:03+08:00
 weight: 3
 ---
