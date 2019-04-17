@@ -1,8 +1,7 @@
 ---
-title: "栈(Stack)"
+title: "哈夫曼树(Huffman Tree)"
 date: 2019-04-17T21:43:31+08:00
-weight: 3
 draft: true
 ---
 
-栈
+哈夫曼树
