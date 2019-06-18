@@ -102,4 +102,4 @@ class Queue<T>{
 ```
 
 ## 代码
-上面的源码可以在 [{{< icon name="fa-github" size="large" >}}](https://github.com/iceyang/data_structure_and_algorithm_code/blob/master/src/queue_by_stack) 获得。
+上面的源码可以在 [{{< icon name="fa-github" size="large" >}}](https://github.com/iceyang/data_structure_and_algorithm_code/tree/master/ts/src/queue_by_stack) 获得。
