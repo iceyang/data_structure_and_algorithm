@@ -9,6 +9,7 @@ date: 2019-03-13T11:07:30+08:00
 
 {{% panel theme="default" header="Changlog" %}}
 
+* 2019-06-18 开始编辑[动态规划相关内容](dynamic_programming/)
 * 2019-04-10 完善[B树(B+树)](data_structure/tree/btree)
 * 2019-03-27 新增[B树(B+树)](data_structure/tree/btree)
 * 2019-03-19 优化[由栈实现的队列](other/queue_by_stack/#优化版)
