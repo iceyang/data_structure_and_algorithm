@@ -46,7 +46,12 @@ func knapsack2(w int, weights []int, values []int) int {
 		weight := weights[i-1]
 		value := values[i-1]
 		// 此时的res[j-weight]相当于二维时的res[i-1][j-weight]
-		// 逆序计算是为了重复计算的情况
+		for j := w; j >= weight; j-- {
+			if res[j-weight]+value > res[j] {
+				res[j] = res[j-weight] + value
+			}
+		}
+		// 逆序计算是为了避免重复计算的情况
 		// 以w=8, weights=[2,3,4,5]，values=[3,4,5,6]为例，当i为1时，如果采用正序计算一轮的结果如下：
 		// [0 0 3 0 0 0 0 0 0]
 		// [0 0 3 3 0 0 0 0 0]
@@ -56,11 +61,6 @@ func knapsack2(w int, weights []int, values []int) int {
 		// [0 0 3 3 6 6 9 9 0]
 		// [0 0 3 3 6 6 9 9 12]
 		// 可以思考下为什么会这样
-		for j := w; j >= weight; j-- {
-			if res[j-weight]+value > res[j] {
-				res[j] = res[j-weight] + value
-			}
-		}
 	}
 
 	return res[w]

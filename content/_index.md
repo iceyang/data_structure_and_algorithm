@@ -9,8 +9,8 @@ date: 2019-07-05T18:05:30+08:00
 
 {{% panel theme="info" header="Changlog" %}}
 
-* 2019-07-05 更新 [动态规划:经典题目：01背包问题](dynamic_programming/example/0-1-knapsack-problem/)
-* 2019-06-29 完善 [动态规划:理论知识与问题特征](dynamic_programming/concept/)
+* 2019-07-05 更新 [动态规划 - 经典题目:01背包问题](dynamic_programming/example/0-1-knapsack-problem/)
+* 2019-06-29 完善 [动态规划 - 理论知识与问题特征](dynamic_programming/concept/)
 * 2019-06-18 开始编辑 [动态规划相关内容](dynamic_programming/)
 * 2019-04-10 完善 [B树(B+树)](data_structure/tree/btree)
 * 2019-03-27 新增 [B树(B+树)](data_structure/tree/btree)
